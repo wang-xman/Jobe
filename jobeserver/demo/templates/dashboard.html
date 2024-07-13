@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Jobe Demo</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous">
+    </script>
+    <!-- Custom styles for this template -->
+    {% load static %}
+    <link href="{% static 'demo.css' %}" rel="stylesheet">
+  </head>
+  <!--End: Head-->
+
+  <!--Begin: body-->
+  <body>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-md-2 col-lg-2 me-0 px-3" href="#">Jobe Demo</a>
+      <button class="navbar-toggler position-absolute d-md-none collapsed"
+              type="button" data-bs-toggle="collapse"
+              data-bs-target="#sidebarMenu" aria-controls="sidebarMenu"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Begin: Search bar -->
+      <input id="search_bar" class="form-control form-control-dark w-100"
+             type="text" placeholder="Search" aria-label="Search">
+      <!-- End: Search bar -->
+      <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+          <a class="nav-link px-3" href="#">Sign out</a>
+        </div>
+      </div>
+    </header>
+  
+    <div class="container-fluid">
+      <div class="row">
+        <!--Begin: navipad -->
+        <nav id="navipad" class="col-md-2 col-lg-2 d-md-block bg-light sidebar collapse">
+          <div id="navipad_sticky_div" class="position-sticky pt-3">
+            <ul id="navipad_menu_list" class="nav flex-column list-group">
+              <!--li elements here-->
+            </ul>
+          </div>
+        </nav>
+        <!--End: navipad-->
+    
+        <!-- BEGIN Right section of the page -->
+        <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
+
+          <!-- Main modal -->
+          <div id="main_modal" class="modal fade" tabindex="-1"
+               aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="main_modal_size_div" class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 id="main_modal_title" class="modal-title">
+                    <!-- modal title here -->
+                  </h5>
+                </div>
+                <div id="main_modal_body" class="modal-body">
+                  <!-- Contents wrapped in a div.container -->
+                </div>
+                <div id="main_modal_footer" class="modal-footer">
+                  <button id="main_modal_button0" type="button" class="btn btn-success">Launch</button>
+                  <button id="main_modal_button1" type="button" class="btn btn-primary">Save</button>
+                  <button id="main_modal_button2" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End: Main modal -->
+    
+          <!-- Item modal -->
+          <div id="item_modal" class="modal fade" tabindex="-1"
+               aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="item_modal_size_div" class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 id="item_modal_label" class="modal-title"></h5>
+                </div>
+                <div id="item_modal_body" class="modal-body">
+                  <!-- Contents wrapped in div.container -->
+                </div>
+                <div id="item_modal_footer" class="modal-footer">
+                  <button id="item_modal_button0" type="button" class="btn btn-success">Edit</button>
+                  <button id="item_modal_button1" type="button" class="btn btn-primary">Save</button>
+                  <button id="item_modal_button2" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End: Item modal -->
+          
+          <!-- Right panel on the right section -->
+          <!-- Begin: Workpad -->
+          <div id="workpad" data-workpad-app="" class="row container-fluid grid gap-3">  
+            
+            <div id="demo_board" class="row container-fluid"></div>
+
+            <div id="demo_canvas" class="row container-fluid">
+              <input id="uploadFile" type="file" accept="image/*" name="uploadFile" display="none"/>
+              <div id="canvas_container">
+                <canvas id="canvas"></canvas>
+              </div>
+            </div>
+          </div>  <!-- End: Workpad -->
+        </main> <!-- End: Main section of the page -->
+      </div>
+    </div>
+
+    {% load static %}
+    <!-- Load crsf and jobe before other scripts. -->
+    <script src="{% static 'crsf.js' %}"></script>
+    <script src="{% static 'jobe.js' %}"></script>
+    <script src="{% static 'demo.js' %}"></script>
+  </body>
+  <!-- End: body -->
+</html>

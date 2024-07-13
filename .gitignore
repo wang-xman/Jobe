@@ -1,0 +1,18 @@
+# vscode related
+*.code-workspace
+.vscode
+
+# virtual env and pyc files
+.venv*/
+__pycache__/
+*.pyc
+tmp/
+tmp*/
+
+# database
+*sqlite3
+migrations/
+
+# env vars, ignore the following in release
+/env
+*.env
