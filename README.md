@@ -28,11 +28,11 @@ Script ```demo.js``` contains examples on how to use
 the Jobe objects.
 
 The demo also consists of a simple server written in Django.
-Server is need to demonstrate the communicate between front
+Server is needed to demonstrate the communicate between front
 and the end via handlers.
 
-In the demo, there is a short script that shows
-how to use Jobe to
+In the demo, there is a concise script that shows
+how to use Jobe to achieve the following operations:
 
 - Load an image into a canvas.
 
